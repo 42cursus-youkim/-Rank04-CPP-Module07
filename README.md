@@ -1,10 +1,10 @@
 # 🇨➕➕ CPP Module 07
 ## template
 
-![](https://badge42.herokuapp.com/api/project/youkim/CPP%20Module%2001)
+![](https://badge42.herokuapp.com/api/project/youkim/CPP%20Module%2007)
 
 > This module is designed to help you understand Templates in CPP.
-#### 📄 [subject pdf](https://cdn.intra.42.fr/pdf/pdf/35954/en.subject.pdf)
+#### 📄 [subject pdf](https://cdn.intra.42.fr/pdf/pdf/49429/en.subject.pdf)
 
 ## tasks
 
