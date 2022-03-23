@@ -5,6 +5,8 @@ CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 SRC := $(wildcard *.cpp)
 OBJ := $(SRC:%.cpp=%.o)
 
+.PHONY: run re test clean
+
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
@@ -13,8 +15,6 @@ $(NAME): $(OBJ)
 
 run: $(NAME)
 	./$(NAME)
-
-.PHONY: run re test clean
 
 re: clean $(NAME)
 

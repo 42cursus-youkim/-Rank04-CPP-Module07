@@ -59,6 +59,7 @@
     "chrono": "cpp",
     "iterator": "cpp",
     "limits": "cpp",
-    "ratio": "cpp"
+    "ratio": "cpp",
+    "*.tpp": "cpp"
   }
 }
