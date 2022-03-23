@@ -22,10 +22,5 @@ int main(void) {
     test_all(e, f, "string");
     test_all(g, h, "same string");
   }
-  {
-    Thing a(42), b(24), c(20), d(20);
-    test_all(a, b, "Thing");
-    test_all(c, d, "same Thing");
-  }
   return 0;
 }

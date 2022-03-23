@@ -8,7 +8,7 @@
 
 ## tasks
 
-### ex00: Swap
+### ex00: Start with a few functions
 
 ### ex01: Iter
 
