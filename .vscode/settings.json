@@ -2,6 +2,8 @@
   "files.associations": {
     "**/*.pug": "jade",
     "**/*.h": "c",
+    "**/*.c": "c",
+    "**/*.cpp": "cpp",
     "**/*.html": "html",
     "**/templates/**/*.html": "django-html",
     "**/templates/**/*.css": "css",
@@ -9,10 +11,12 @@
     "*.html": "html",
     "*.xpm": "c",
     "*.h": "c",
+    "*.hpp": "cpp",
     "*.njk": "nunjucks",
     "**/templates/**/*": "django-txt",
     "*.pug": "jade",
     "*.list": "properties",
+    "*.sav": "json",
     "algorithm": "cpp",
     "array": "cpp",
     "concepts": "cpp",
@@ -47,6 +51,14 @@
     "mutex": "cpp",
     "queue": "cpp",
     "sstream": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "cstddef": "cpp",
+    "__tuple": "cpp",
+    "__functional_base": "cpp",
+    "__functional_base_03": "cpp",
+    "chrono": "cpp",
+    "iterator": "cpp",
+    "limits": "cpp",
+    "ratio": "cpp"
   }
 }

@@ -3,7 +3,7 @@
 
 using std::cout;
 
-int main(void) {
+int main() {
   {
     int a = 42, b = 24, c = 20, d = 20;
     test_all(a, b, "int");

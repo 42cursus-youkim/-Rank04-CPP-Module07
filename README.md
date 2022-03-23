@@ -11,6 +11,7 @@
 ### ex00: Start with a few functions
 
 ### ex01: Iter
+> Implement a function template iter that takes 3 parameters and returns nothing.
 
 ### ex02: Array
-[💾 main.cpp](https://projects.intra.42.fr/uploads/document/document/6293/main.cpp)
+[💾 main.cpp](https://projects.intra.42.fr/uploads/document/document/8677/main.cpp)
