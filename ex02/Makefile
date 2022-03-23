@@ -20,4 +20,4 @@ run: $(NAME)
 re: clean $(NAME)
 
 clean:
-	rm -f *.o $(NAME)
+	rm -f $(OBJ) $(NAME)

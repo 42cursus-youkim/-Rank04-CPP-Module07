@@ -9,10 +9,10 @@
 template <typename T>
 class Array {
  private:
-  T* _data;
   uint _size;
+  T* _data;
 
-  bool  _is_valid_index(int index) const;
+  bool is_valid_index(int index) const;
 
  public:
   // Constructors & Destructors
@@ -24,10 +24,9 @@ class Array {
   // Operators
   Array<T>& operator=(const Array<T>& other);
   T& operator[](int index);
-  T operator[](int index) const;
+  const T operator[](int index) const;
   int size() const;
 };
-
 
 // Template implementations
 #include "Array.tpp"
