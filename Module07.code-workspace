@@ -30,7 +30,11 @@
       "*.list": "properties",
       "*.sav": "json",
       "*.lalrpop": "rust",
-      "iostream": "cpp"
+      "iostream": "cpp",
+      "algorithm": "cpp",
+      "iosfwd": "cpp",
+      "__tuple": "cpp",
+      "array": "cpp"
     }
   }
 }
