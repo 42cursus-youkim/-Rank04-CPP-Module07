@@ -34,7 +34,10 @@
       "algorithm": "cpp",
       "iosfwd": "cpp",
       "__tuple": "cpp",
-      "array": "cpp"
+      "array": "cpp",
+      "chrono": "cpp",
+      "*.tpp": "cpp",
+      "stdexcept": "cpp"
     }
   }
 }

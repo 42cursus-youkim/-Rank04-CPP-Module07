@@ -1,12 +1,12 @@
 NAME := prog.out
 CXX := c++
-CXXFLAGS := -Wall -Wextra -Werror -std=c++98 \
+CXXFLAGS := -g -Wall -Wextra -Werror -std=c++98 -pedantic \
 			-Iinclude/ -Itemplate/ -Iutil/
 
 SRC := $(wildcard src/*.cpp)
 OBJ := $(SRC:%.cpp=%.o)
 
-.PHONY: run re test clean
+.PHONY: run re leak clean
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
@@ -18,6 +18,9 @@ run: $(NAME)
 	./$(NAME)
 
 re: clean $(NAME)
+
+leak: $(NAME)
+	colour-valgrind ./$(NAME)
 
 clean:
 	rm -f $(OBJ) $(NAME)
