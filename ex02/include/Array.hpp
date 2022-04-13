@@ -1,18 +1,17 @@
 #ifndef __ARRAY_H__
 #define __ARRAY_H__
 
-#include <sys/types.h>
+#include <stddef.h>
 
-// create a orthodox canonical c++ class below
-//  generate constructor, destructor, copy assignment
-//  name's Array.
+typedef unsigned int uint;
+
 template <typename T>
 class Array {
  private:
   uint _size;
   T* _data;
 
-  bool is_valid_index(int index) const;
+  bool is_valid_index(size_t index) const;
 
  public:
   // Constructors & Destructors
@@ -23,9 +22,9 @@ class Array {
 
   // Operators
   Array<T>& operator=(const Array<T>& other);
-  T& operator[](int index);
-  const T operator[](int index) const;
-  int size() const;
+  T& operator[](size_t index);
+  const T operator[](size_t index) const;
+  size_t size() const;
 };
 
 // Template implementations
