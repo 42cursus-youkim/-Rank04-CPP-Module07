@@ -23,7 +23,7 @@ class Array {
   // Operators
   Array<T>& operator=(const Array<T>& other);
   T& operator[](size_t index);
-  const T operator[](size_t index) const;
+  const T& operator[](size_t index) const;
   size_t size() const;
 };
 

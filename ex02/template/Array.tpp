@@ -50,7 +50,7 @@ bool Array<T>::is_valid_index(size_t index) const {
 }
 
 template <typename T>
-const T Array<T>::operator[](size_t index) const {
+const T& Array<T>::operator[](size_t index) const {
   if (not is_valid_index(index))
     throw std::out_of_range("(value) Index out of range");
   return _data[index];
