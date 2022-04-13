@@ -1,4 +1,5 @@
 #include <iostream>
+#include "MyInt.hpp"
 #include "whatever.hpp"
 
 using std::cout;
@@ -21,6 +22,11 @@ int main() {
     test_all(c, d, "same string");
     test_all(e, f, "string");
     test_all(g, h, "same string");
+  }
+  {
+    MyInt a(42), b(24), c(20), d(20);
+    test_all(a, b, "MyInt");
+    test_all(c, d, "same MyInt");
   }
   return 0;
 }
