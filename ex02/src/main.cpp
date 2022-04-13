@@ -6,6 +6,44 @@ using std::cout;
 
 #define MAX_VAL 750
 
+void test_mandatory() {
+  test::header("Mandatory");
+  Array<int> numbers(MAX_VAL);
+  int* mirror = new int[MAX_VAL];
+  srand(time(NULL));
+  for (int i = 0; i < MAX_VAL; i++) {
+    const int value = rand();
+    numbers[i] = value;
+    mirror[i] = value;
+  }
+  {
+    test::subject("Scope");
+    Array<int> tmp = numbers;
+    Array<int> test(tmp);
+  }
+
+  test::subject("Values are copied");
+  for (int i = 0; i < MAX_VAL; i++)
+    assert(mirror[i] == numbers[i]);
+  try {
+    test::subject("Accessing invalid index -2");
+    numbers[-2] = 0;
+  } catch (const std::exception& e) {
+    std::cerr << e.what() << '\n';
+  }
+  try {
+    test::subject("Assigning invalid index MAX_VAL=750");
+    numbers[MAX_VAL] = 0;
+  } catch (const std::exception& e) {
+    std::cerr << e.what() << '\n';
+  }
+
+  for (int i = 0; i < MAX_VAL; i++)
+    numbers[i] = rand();
+
+  delete[] mirror;  //
+}
+
 void test_int() {
   test::header("Int");
   {
@@ -81,5 +119,6 @@ void test_string() {
 int main(int, char**) {
   test_int();
   test_string();
+  test_mandatory();
   return 0;
 }
