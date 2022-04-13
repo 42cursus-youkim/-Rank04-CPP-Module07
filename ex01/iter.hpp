@@ -9,20 +9,14 @@ using std::cout;
 using std::string;
 
 template <typename T>
-void iter(T array[], size_t len, void (*func)(T& array)) {
+void iter(const T array[], size_t len, void (*func)(const T& elem)) {
   for (size_t i = 0; i < len; i++)
     func(array[i]);
 }
 
 template <typename T>
-void printAny(T& value) {
+void printAny(const T& value) {
   cout << value << ", ";
 }
 
-template <typename T>
-void testwithType(T array[], const string& type_name) {
-  cout << "\n<Testing for " << type_name << ">\n";
-  iter(array, 10, printAny<T>);
-  cout << "\n";
-}
 #endif  // __ITER_H__
