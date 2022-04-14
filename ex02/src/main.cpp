@@ -29,13 +29,13 @@ void test_mandatory() {
     test::subject("Accessing invalid index -2");
     numbers[-2] = 0;
   } catch (const std::exception& e) {
-    std::cerr << e.what() << '\n';
+    std::cerr << RED << e.what() << '\n';
   }
   try {
     test::subject("Assigning invalid index MAX_VAL=750");
     numbers[MAX_VAL] = 0;
   } catch (const std::exception& e) {
-    std::cerr << e.what() << '\n';
+    std::cerr << RED << e.what() << '\n';
   }
 
   for (int i = 0; i < MAX_VAL; i++)
@@ -47,7 +47,7 @@ void test_mandatory() {
 void test_int() {
   test::header("Int");
   {
-    test::subject("Default Constructor");
+    test::subject("Accessing invalid index 0 @ Empty Array");
     Array<int> a;
     try {
       cout << a[0] << ", ";
@@ -60,6 +60,7 @@ void test_int() {
     Array<int> a(10);
     TEST_EXPECT(a.size() == 10);
     try {
+      test::subject("Accessing invalid index 10");
       for (int i = 0; i <= 10; i++)
         cout << a[i] << ", ";
     } catch (std::exception& e) {
@@ -120,5 +121,8 @@ int main(int, char**) {
   test_int();
   test_string();
   test_mandatory();
+  cout << END "\n";
+  // #include <cstdlib>
+  // system("leaks prog.out");
   return 0;
 }
