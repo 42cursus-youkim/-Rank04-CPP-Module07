@@ -37,7 +37,8 @@
       "array": "cpp",
       "chrono": "cpp",
       "*.tpp": "cpp",
-      "stdexcept": "cpp"
+      "stdexcept": "cpp",
+      "string": "cpp"
     }
   }
 }
