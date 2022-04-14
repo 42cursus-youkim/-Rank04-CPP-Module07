@@ -45,7 +45,7 @@ Array<T>& Array<T>::operator=(const Array<T>& other) {
 }
 
 template <typename T>
-bool Array<T>::is_valid_index(size_t index) const {
+inline bool Array<T>::is_valid_index(size_t index) const {
   return (0 <= index && index < _size);
 }
 

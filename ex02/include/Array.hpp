@@ -11,7 +11,7 @@ class Array {
   uint _size;
   T* _data;
 
-  bool is_valid_index(size_t index) const;
+  inline bool is_valid_index(size_t index) const;
 
  public:
   // Constructors & Destructors
